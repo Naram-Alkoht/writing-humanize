@@ -78,9 +78,9 @@ Humanize this text: [your text]
 
 > AI-assisted coding serves as an enduring testament to the transformative potential of large language models, marking a pivotal moment in the evolution of software development. In today's rapidly evolving technological landscape, these groundbreaking tools are reshaping how engineers ideate, iterate, and deliver, underscoring their vital role in modern workflows.
 >
-> * 💡 **Speed:** Code generation is significantly faster, reducing friction and empowering developers.
-> * 🚀 **Quality:** Output quality has been enhanced through improved training.
-> * ✅ **Adoption:** Usage continues to grow, reflecting broader industry trends.
+> - 💡 **Speed:** Code generation is significantly faster, reducing friction and empowering developers.
+> - 🚀 **Quality:** Output quality has been enhanced through improved training.
+> - ✅ **Adoption:** Usage continues to grow, reflecting broader industry trends.
 >
 > I hope this helps! Let me know if you'd like me to expand on any section!
 
@@ -91,18 +91,6 @@ Humanize this text: [your text]
 > The risk is how confident the suggestions look. I've accepted code that compiled and passed lint, then found later it missed the point entirely.
 >
 > Treat it like autocomplete and review every line. It's useful. Use it to avoid thinking, and it will help you ship bugs faster.
-
----
-
-## Design decisions
-
-**Why merge instead of maintaining two separate skills?**
-
-I was running both skills sequentially — [blader/humanizer](https://github.com/blader/humanizer) first for broad pattern cleanup, then my own `writing-humanize` for vocabulary preservation and voice matching. The overlap created friction: some patterns appeared in both, the process descriptions contradicted each other, and switching between two files mid-task was unnecessary overhead. Merging them removes the duplication and makes the preservation rules apply from the start, not as a second pass.
-
-**Why general-purpose instead of technical-only?**
-
-My original skill was scoped to developer and technical content because that's where I first noticed the vocabulary problem. But the same issue shows up everywhere — legal writers don't want "indemnification" swapped for "protection," medical writers don't want "contraindicated" softened to "not recommended." The patterns are universal. The technical scope was just where I happened to start.
 
 ---
 
