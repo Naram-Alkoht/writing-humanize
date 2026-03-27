@@ -45,7 +45,7 @@ Plus 6 additional voice-specific patterns: formulaic headers, transition filler,
 
 ```bash
 mkdir -p ~/.claude/skills
-git clone https://github.com/naramalkoht/writing-humanize.git ~/.claude/skills/writing-humanize
+git clone https://github.com/Naram-Alkoht/writing-humanize.git ~/.claude/skills/writing-humanize
 ```
 
 ### Claude.ai Projects
